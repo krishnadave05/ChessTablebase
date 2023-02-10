@@ -1,30 +1,13 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
-
-orbs:
-  codecov: codecov/codecov@3.0.0c
-
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs 
+version: 2
 jobs:
-  example-job:
+  build:
     docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
-    steps:
-      - codecov/upload:
-          token: '14ccdc7c-8059-491f-8a5a-117874623211' 
-workflows:
-  example-workflow:
-    jobs:
-      - example-job
-
-
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+      - image: circleci/node:14.16.0.
+steps:
+  - checkout
+  - run:
+      name: Install dependencies
+      command: npm install
+  - run:
+      name: Run tests
+      command: npm test
