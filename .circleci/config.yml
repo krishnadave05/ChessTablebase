@@ -14,7 +14,12 @@ jobs:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
-      - codecov/upload
+      - codecov/upload:
+          token: '14ccdc7c-8059-491f-8a5a-117874623211' 
+workflows:
+  example-workflow:
+    jobs:
+      - example-job
 workflows:
   example-workflow:
     jobs:
