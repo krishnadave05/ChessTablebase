@@ -1,14 +1,20 @@
 import './App.css';
 import Chessboard from "chessboardjsx";
+import Sidebar from './sidebar';
 
 
 function App() {
   return (
-    <div className="flex-center">
-      <Chessboard
-        width={400}
-        position="start"
-      />
+    <div className="row">
+      <div className="column">
+        <Chessboard
+          width={400}
+          position="start"
+        />
+      </div>
+      <div className="column">
+        <Sidebar/>
+        </div>
     </div>
   );
 }
