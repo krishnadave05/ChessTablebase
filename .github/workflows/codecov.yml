@@ -16,7 +16,6 @@ jobs:
       - name: Install codecov
         run: sudo apt-get update && sudo apt-get install -y curl && curl -s https://codecov.io/bash | bash -s
       - name: Run tests
-        run: pytest
       - name: Upload coverage report to Codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
