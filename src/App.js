@@ -1,22 +1,21 @@
+import React, { Component } from "react";
 import './App.css';
-import Chessboard from "chessboardjsx";
-import Sidebar from './sidebar';
+import BoardSetup from "./integrations/BoardSetup"
+import Sidebar from "./integrations/sidebar"
 
-
-function App() {
-  return (
-    <div className="row">
-      <div className="column">
-        <Chessboard
-          width={400}
-          position="start"
-        />
-      </div>
-      <div className="column">
-        <Sidebar/>
+class App extends Component {
+  render(){
+    return(
+      <div className="row">
+        <div className="column">
+          <BoardSetup />
         </div>
-    </div>
-  );
+        <div className="column">
+          <Sidebar/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
