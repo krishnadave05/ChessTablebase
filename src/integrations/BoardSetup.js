@@ -1,5 +1,6 @@
 import React from "react";
 import Chessboard from "chessboardjsx";
+import onDragMove from "./DragMove";
 
 function BoardSetup() {
     return (
@@ -10,6 +11,7 @@ function BoardSetup() {
             sparePieces={true}
             dropOffBoard="trash"
             showNotation={true}
+            
         />      
     );
 }
