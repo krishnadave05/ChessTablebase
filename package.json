@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "ChessTablebase",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,6 +37,9 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.7",
+    "jest": "^29.4.3",
     "jest-watch-typeahead": "^0.6.5"
   }
 }
