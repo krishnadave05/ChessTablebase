@@ -6,7 +6,7 @@ function BoardSetup() {
         <Chessboard
             id="standard"
             width={400}
-            //position="start"
+            position="empty"
             sparePieces={true}
             dropOffBoard="trash"
             showNotation={true}
