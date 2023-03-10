@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-      "chess.js": "0.10.2",
-      "chessboardjsx": "2.0.1",
-      "react": "^16.4.0",
-      "react-dom": "^16.4.0",
-      "react-scripts": "1.1.4",
-      "roughjs": "2.2.5",
-      "web-vitals": "^2.1.4"
+    "chess.js": "0.10.2",
+    "chessboardjsx": "2.0.1",
+    "jquery": "^3.6.4",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4",
+    "roughjs": "2.2.5",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,15 +18,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
- 
-  
   "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest"
-      ]
-    },
-    "devDependencies": {
-      "jest-watch-typeahead": "^0.6.5"
-    }
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "jest-watch-typeahead": "^0.6.5"
+  }
 }
