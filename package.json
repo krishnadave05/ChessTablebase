@@ -9,7 +9,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
-    "roughjs": "2.2.5",
+    "roughjs": "2.2.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

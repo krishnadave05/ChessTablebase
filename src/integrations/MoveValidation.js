@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Chess } from "chess.js"; // import Chess from  "chess.js"(default) if recieving an error about new Chess() not being a constructor
+import Chess  from "chess.js"; // import Chess from  "chess.js"(default) if recieving an error about new Chess() not being a constructor
 
 import Chessboard from "chessboardjsx";
 
 class HumanVsHuman extends Component {
   static propTypes = { children: PropTypes.func };
+   game = Chess();
 
   state = {
     fen: "start",
@@ -66,6 +67,7 @@ class HumanVsHuman extends Component {
       to: targetSquare,
       promotion: "q" // always promote to a queen for example simplicity
     });
+    console.log("after move: ",this.game.fen());
 
     // illegal move
     if (move === null) return;
@@ -150,7 +152,7 @@ class HumanVsHuman extends Component {
   }
 }
 
-export default function MoveValidation() {
+export default function WithMoveValidation() {
   return (
     <div>
       <HumanVsHuman>
@@ -163,12 +165,13 @@ export default function MoveValidation() {
           dropSquareStyle,
           onDragOverSquare,
           onSquareClick,
-          onSquareRightClick
+          onSquareRightClick,
         }) => (
           <Chessboard
             id="humanVsHuman"
             width={320}
             position={position}
+            dropOffBoard="trash"
             onDrop={onDrop}
             onMouseOverSquare={onMouseOverSquare}
             onMouseOutSquare={onMouseOutSquare}
@@ -176,6 +179,7 @@ export default function MoveValidation() {
               borderRadius: "5px",
               boxShadow: `0 5px 15px rgba(0, 0, 0, 0.5)`
             }}
+            sparePieces
             squareStyles={squareStyles}
             dropSquareStyle={dropSquareStyle}
             onDragOverSquare={onDragOverSquare}
@@ -184,6 +188,7 @@ export default function MoveValidation() {
           />
         )}
       </HumanVsHuman>
+      
     </div>
   );
 }
